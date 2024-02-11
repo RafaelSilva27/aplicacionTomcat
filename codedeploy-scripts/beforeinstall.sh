@@ -9,6 +9,6 @@
 # bash gradlew war
 # mv build/libs/holamundo-0.0.1-SNAPSHOT-plain.war /opt/tomcat/webapps/holamundo-0.0.1-SNAPSHOT-plain.war
 
-cd /opt/codedeploy-agent/deployment-root/deployment-group-id/deployment-id/deployment-archive
-chmod +x gradlew
+chmod +x /opt/codedeploy-agent/deployment-root/$DEPLOYMENT_GROUP_ID/$DEPLOYMENT_ID/deployment-archive/gradlew
+cd /opt/codedeploy-agent/deployment-root/$DEPLOYMENT_GROUP_ID/$DEPLOYMENT_ID/deployment-archive/
 bash gradlew war
