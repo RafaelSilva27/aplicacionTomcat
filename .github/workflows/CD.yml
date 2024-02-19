@@ -25,6 +25,18 @@ jobs:
       - name: Permisos gradlew
         run: chmod +x gradlew
       
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
       - name: Build with Gradle
         run: ./gradlew build
+
+      - name: Set variable
+        run: echo 'GITHUB_SHA=${GITHUB_SHA}' >> $GITHUB_ENV
+      
+      - name: Dispaly Github Sha
+        run: echo $GITHUB_SHA
 
