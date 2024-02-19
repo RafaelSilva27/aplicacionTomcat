@@ -35,8 +35,8 @@ jobs:
         run: ./gradlew build
 
       - name: Set variable
-        run: echo 'GITHUB_SHA=${GITHUB_SHA}' >> $GITHUB_ENV
+        run: echo 'git_sha=${GITHUB_SHA}' >> $GITHUB_ENV
       
       - name: Dispaly Github Sha
-        run: echo $GITHUB_SHA
+        run: echo $git_sha
 
